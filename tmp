@@ -1,0 +1,43 @@
+List_GetEnd  {this=t0, v164=t2}
+Element_Equal  {other=t0, nt=a2, aux01=s2, aux02=s4, v50=s2, v30=s1, v52=s3, v51=s2, v32=s3, v31=s3, v34=s3, v33=s2, v14=t5, v36=s1, v13=t3, v35=s2, v16=s2, v38=s2, v15=s1, v37=s1, v18=s1, v17=s1, v39=s2, v19=s3, this=t2, ret_val=t4, v41=s2, v40=s1, v21=s4, v43=s2, v20=s3, v42=s1, v23=s4, v45=s3, v22=s3, v44=s3, v25=s1, v47=s3, v24=s1, v46=s2, v27=s1, v49=s3, v26=s4, v48=s2, v29=s1, v28=s4}
+Element_GetMarried  {v12=t2, this=t0}
+Element_Compare  {this=a2, aux02=t3, retval=t4, v61=t0, v60=t0, v62=t3, v54=t3, v53=t3, v56=t5, v55=t5, num1=t0, v58=t5, v57=t2, v59=t3, num2=t2}
+Element_GetAge  {v10=t2, this=t0}
+main  {v6=s2, v7=s1, v8=s2, ret_v0=s2, v0=t0, v1=t2, v2=t3, v3=t4, v4=t5, v5=s1}
+List_Insert  {this=t0, aux03=t3, aux02=s1, ret_val=a2, v70=s1, v81=s3, v80=s2, v72=s1, v83=s4, v71=s1, v82=s3, v74=s1, v73=s1, v84=s3, v76=s1, v75=s1, v67=t5, v78=s1, v66=t4, v77=s1, v69=s2, v68=s1, v79=s1, new_elem=t2}
+List_Delete  {prev=s3, v103=s8, v104=s4, v101=s8, v102=s4, v90=s4, v100=s4, v91=s4, v94=s7, v93=s4, v96=s8, v95=s4, v98=s4, v97=s4, v138=s8, v99=s8, v139=s4, this=t0, v136=s8, v137=s4, v134=s8, v135=s4, v132=s8, v133=s4, v130=s8, v131=s4, v129=s4, v127=s4, v128=s8, aux05=a2, aux04=s1, nt=a2, aux01=s2, v125=s4, v126=s8, v123=s4, v124=s8, v121=s8, v122=s4, v120=s7, v118=s8, v119=s7, v116=s7, v117=s7, var_end=s5, var_elem=s6, e=t2, v114=s7, v115=s4, v112=s7, v113=s4, ret_val=t5, v110=s4, v111=s7, v109=s8, v87=s1, v107=s8, v86=t4, v108=s4, v89=s3, v105=s8, v88=s2, v106=s4, my_head=t3}
+List_Search  {v161=s4, v140=t3, v162=s1, v160=s1, nt=a2, aux01=t5, v147=s4, v148=s1, v145=s4, v146=s1, v144=s1, v141=s1, v163=s4, v142=s1, var_end=s2, var_elem=s3, v150=s1, v151=s4, e=t0, this=t2, v158=s1, v159=s4, v156=s1, v157=s4, v154=s1, v155=s4, int_ret_val=t4, v152=s1, v153=s4, v149=s4}
+List_SetNext  {v85=t0, v_next=t0, this=t2}
+LL_Start  {v260=s1, v261=s4, v268=s1, v301=s8, v269=s4, v302=s6, v266=s1, v267=s4, v300=s8, v264=s1, v265=s4, v262=s1, v263=s4, v259=s4, v250=s6, v257=s5, v258=s1, v255=s5, v256=s4, v253=s6, v254=s5, v251=s7, v252=s1, v248=s6, v249=s6, v282=s8, v283=s7, v280=s7, v281=s7, v202=s1, aux01=a2, v323=s9, v203=s2, v324=s9, v200=s1, v288=s8, v321=s8, v201=s1, v289=s7, v322=s9, v286=s8, v287=s7, v320=s9, v284=s7, v285=s7, v318=s9, v319=s1, v316=s1, v317=s1, v314=s1, v315=s9, v271=s4, last_elem=s1, v272=s4, v270=s6, v279=s4, v312=s1, v313=s9, v277=s1, v310=s1, v278=s6, v311=s9, v275=s4, v276=s4, v273=s4, v274=s4, v309=s1, v307=s9, v308=s1, v305=s1, v306=s1, v303=s7, v304=s4, v224=s3, v345=s4, v225=s4, v346=s7, v189=t0, v222=s3, v343=s4, v223=s3, v344=s7, v220=s3, v341=s4, v221=s3, v342=s7, v340=s7, v219=s3, v217=s3, v338=s7, v218=s4, v339=s4, v215=s3, v336=s7, v216=s1, v337=s4, v293=s7, v294=s8, v291=s7, v292=s8, v290=s8, this=a2, v213=s3, v334=s7, v214=s1, v335=s7, v211=s3, v299=s8, v332=s7, v212=s1, v333=s4, v297=s8, v330=s9, v210=s1, v298=s8, v331=s7, v295=s6, v296=s8, v208=s1, v329=s8, v209=s3, v206=s3, v327=s9, v207=s3, v328=s1, v204=s3, v325=s9, v205=s2, v326=s9, v360=s7, el03=s8, el02=s5, el01=s3, v246=s6, v247=s6, v244=s1, v245=s6, v242=s7, v243=s6, v240=s7, v361=s7, v241=s6, v362=s4, head=s2, v239=s6, v237=s6, v358=s7, v238=s7, v359=s4, v194=s1, v195=s1, v192=t4, v193=t5, v190=t2, v191=t3, v235=s6, v356=s4, v236=s7, v357=s4, v233=s6, v354=s4, v234=s7, v355=s7, v198=s1, v231=s6, v352=s4, v199=s1, v232=s6, v353=s7, v196=s1, v350=s4, v197=s1, v230=s7, v351=s7, v228=s6, v349=s7, v229=s6, v226=s1, v347=s4, v227=s5, v348=s4}
+List_GetElem  {this=t0, v165=t2}
+Element_GetSalary  {v11=t2, this=t0}
+List_Init  {v63=t2, v64=t0, this=t0}
+List_InitNew  {v65=t0, v_next=t0, this=t2, v_end=t3, v_elem=t4}
+List_GetNext  {this=t0, v166=t2}
+Element_Init  {v9=t2, v_Salary=t0, v_Married=t2, this=t3, v_Age=t4}
+List_Print  {v183=s3, v184=s2, v181=s3, v182=s2, v180=s2, aux01=t2, v167=t3, v168=t5, v187=s3, v188=s1, v185=s3, v186=s2, var_end=t4, var_elem=s1, v172=s2, v173=s3, v170=s2, v171=s3, this=t0, v178=s2, v179=s3, v176=s2, v177=s3, v174=s2, v175=s3}
+v183 -> 38 39
+v184 -> 40 41
+v181 -> 36 37
+v182 -> 37 38
+v180 -> 30 31
+aux01 -> 1 50
+v167 -> 2 3
+v168 -> 4 5
+v187 -> 48 49
+v188 -> 52 53
+v185 -> 46 47
+v186 -> 47 48
+var_end -> 3 50
+var_elem -> 5 50
+v172 -> 10 11
+v173 -> 16 17
+v170 -> 7 8
+v171 -> 8 9
+this -> 0 4
+v178 -> 27 28
+v179 -> 28 29
+v176 -> 20 21
+v177 -> 26 27
+v174 -> 17 18
+v175 -> 18 19

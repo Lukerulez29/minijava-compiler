@@ -1,0 +1,151 @@
+.equiv @sbrk, 9
+.equiv @print_string, 4
+.equiv @print_char, 11
+.equiv @print_int, 1
+.equiv @exit, 10
+.equiv @exit2, 17
+.text
+.globl main
+jal Main
+li a0, @exit
+ecall
+.globl Main
+Main:
+sw fp, -8(sp)
+mv fp, sp
+li t6, 20
+sub sp, sp, t6
+sw ra, -4(fp)
+li t0, 4
+sw t0, -12(fp)
+lw t1, -12(fp)
+mv a0, t1
+jal alloc
+mv t0, a0
+sw t0, -16(fp)
+lw t1, -12(fp)
+mv a0, t1
+jal alloc
+mv t3, a0
+la t0, FacComputeFac
+sw t0, -12(fp)
+lw t1, -12(fp)
+sw t1, 0(t3)
+sw t3, -12(fp)
+lw t0, -16(fp)
+lw t1, -12(fp)
+sw t1, 0(t0)
+lw t1, -16(fp)
+bnez t1, Mainnull1_no_long_jump0
+jal Mainnull1
+Mainnull1_no_long_jump0:
+lw t1, -16(fp)
+lw t4, 0(t1)
+lw t4, 0(t4)
+li t0, 6
+sw t0, -12(fp)
+sw t5, -20(fp)
+lw t0, -16(fp)
+mv a2, t0
+lw t0, -12(fp)
+mv a3, t0
+li t6, 0
+sub sp, sp, t6
+jalr t4
+addi sp, sp, 0
+mv t0, a0
+lw t5, -20(fp)
+mv t5, t0
+mv a0, t5
+jal print
+jal Mainmain_end
+Mainnull1:
+la a0, msg_array_oob
+jal error
+Mainmain_end:
+lw a0, -12(fp)
+lw ra, -4(fp)
+lw fp, -8(fp)
+addi sp, sp, 20
+jr ra
+.globl FacComputeFac
+FacComputeFac:
+sw fp, -8(sp)
+mv fp, sp
+li t6, 28
+sub sp, sp, t6
+sw ra, -4(fp)
+sw s1, -12(fp)
+li t3, 1
+slt t4, a3, t3
+bnez t4, FacComputeFacif1_else_no_long_jump1
+jal FacComputeFacif1_else
+FacComputeFacif1_else_no_long_jump1:
+li t0, 1
+sw t0, -16(fp)
+jal FacComputeFacif1_end
+FacComputeFacif1_else:
+lw t5, 0(a2)
+lw t5, 0(t5)
+li t3, 1
+sub t0, a3, t3
+sw t0, -20(fp)
+sw a2, -24(fp)
+sw a3, -28(fp)
+lw t0, -24(fp)
+mv a2, t0
+lw t0, -20(fp)
+mv a3, t0
+li t6, 0
+sub sp, sp, t6
+jalr t5
+addi sp, sp, 0
+mv t0, a0
+lw a2, -24(fp)
+lw a3, -28(fp)
+mv s1, t0
+mul t0, a3, s1
+sw t0, -16(fp)
+FacComputeFacif1_end:
+lw s1, -12(fp)
+lw a0, -16(fp)
+lw ra, -4(fp)
+lw fp, -8(fp)
+addi sp, sp, 28
+jr ra
+.globl print
+print:
+mv a1, a0
+li a0, @print_int
+ecall
+li a1, 10
+li a0, @print_char
+ecall
+jr ra
+.globl error
+error:
+mv a1, a0
+li a0, @print_string
+ecall
+li a1, 10
+li a0, @print_char
+ecall
+li a0, @exit
+ecall
+abort_17:
+j abort_17
+.globl alloc
+alloc:
+mv a1, a0
+li a0, @sbrk
+ecall
+jr ra
+.data
+.globl msg_nullptr
+msg_nullptr:
+.asciiz "null pointer"
+.align 2
+.globl msg_array_oob
+msg_array_oob:
+.asciiz "array index out of bounds"
+.align 2
